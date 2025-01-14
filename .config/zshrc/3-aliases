@@ -1,0 +1,98 @@
+# -----------------------------------------------------
+# ALIASES
+# -----------------------------------------------------
+
+# -----------------------------------------------------
+# Zsh
+# -----------------------------------------------------
+alias reload="clear && source ~/.zshrc"
+alias mkdir="mkdir -p"
+alias :q="exit"
+alias c="clear"
+alias ff="fastfetch"
+alias copy="clipcopy"
+
+# -----------------------------------------------------
+# Config
+# -----------------------------------------------------
+alias dotconfig="cd ~/dotfiles/.config/ && nvim ."
+alias config="cd ~/.config/ && nvim"
+alias omzconfig="nvim ~/.oh-my-zsh"
+alias zshconfig="cd ~/dotfiles/.config/zshrc/ && nvim"
+alias tmuxconfig="cd ~/.config/tmux/ && nvim"
+alias nvimconfig="cd ~/.config/nvim/ && nvim"
+
+# -----------------------------------------------------
+# Editor
+# -----------------------------------------------------
+alias code='windsurf'
+alias v='nvim'
+alias vim='nvim'
+alias vi='nvim'
+alias n='cd ~/notes/ && nvim .'
+
+# -----------------------------------------------------
+# System
+# -----------------------------------------------------
+alias ts='~/.config/ml4w/scripts/snapshot.sh'
+alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
+alias wifi='nmtui'
+alias shutdown='systemctl poweroff'
+
+# -----------------------------------------------------
+# ML4W Apps
+# -----------------------------------------------------
+# alias ml4w='com.ml4w.welcome'
+# alias ml4w-settings='com.ml4w.dotfilessettings'
+# alias ml4w-hyprland='com.ml4w.hyprland.settings'
+# alias ml4w-options='ml4w-hyprland-setup -m options'
+# alias ml4w-sidebar='ags toggle sidebar'
+# alias ml4w-diagnosis='~/.config/hypr/scripts/diagnosis.sh'
+# alias ml4w-hyprland-diagnosis='~/.config/hypr/scripts/diagnosis.sh'
+# alias ml4w-qtile-diagnosis='~/.config/ml4w/qtile/scripts/diagnosis.sh'
+# alias ml4w-update='~/.config/ml4w/update.sh'
+
+# -----------------------------------------------------
+# System
+# -----------------------------------------------------
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
+# -----------------------------------------------------
+# Go
+# -----------------------------------------------------
+alias goi='go install'
+alias gob='go build'
+alias gor='go run'
+alias goinit='go mod init'
+
+# -----------------------------------------------------
+# Qtile
+# -----------------------------------------------------
+# TODO: ??
+# alias res1='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 120'
+# alias res2='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120'
+# alias setkb='setxkbmap de;echo "Keyboard set back to de."'
+
+# -----------------------------------------------------
+# Yay
+# -----------------------------------------------------
+alias y="yay"
+alias yupgrade="yay -Syu" # Sync with repositories before upgrading packages
+alias yclear="yay -Scc" # Remove unused packages and cache
+alias yconfig="yay -Pg" # Display current configuration
+alias yremove="yay -R" # Remove packages, keeping its settings and dependencies
+alias yforceremove="yay -Rns" # Remove packages, including its settings and unneeded dependencies
+alias yorphan="yay -Qtd" # Remove orphans using yay
+alias ylocal="yay -Qs" # Search for packages in the local database
+alias ylist="yay -Qe" # List installed packages including from AUR (tagged as "local")
+alias yinstall="yay -U" # Install a package from a local file
+alias yupdateall="yay -Syu" # Update all packages, same as 'yay'
+alias yupdateaur="yay -Syu --aur" # Update only AUR packages
+
+# -----------------------------------------------------
+# Util
+# -----------------------------------------------------
+alias color='hyprpicker'
+alias dlmp3='yt-dlp -x --audio-format mp3'
+alias calc='kalker'
+alias mn='hledger' # finances

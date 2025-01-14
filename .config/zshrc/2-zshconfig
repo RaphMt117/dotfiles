@@ -1,0 +1,39 @@
+# oh-myzsh themes: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# ZSH_THEME=robbyrussell
+
+ZOXIDE_CMD_OVERRIDE="cd"
+ZSH_THEME="robbyrussell"
+zstyle ':omz:update' mode reminder
+
+plugins=(
+    git
+    # TODO: custom config https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
+    web-search
+
+    zsh-autopair
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-history-substring-search
+    dirhistory
+    fzf
+    zoxide
+    tmux
+    colorize
+)
+
+# Set-up FZF key bindings (CTRL R for fuzzy history finder)
+source <(fzf --zsh)
+
+# zsh history
+HISTFILE=~/.config/zsh/zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_SAVE_NO_DUPS
+
+source $ZSH/oh-my-zsh.sh
