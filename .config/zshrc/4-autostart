@@ -17,7 +17,7 @@
 # Random Drawing
 # -----------------------------------------------------
 
-# colorscript random
+colorscript random
 
 # -----------------------------------------------------
 # Random phrases
@@ -25,4 +25,4 @@
 
 # fortune
 
-fortune | cowsay
+# fortune | cowsay
