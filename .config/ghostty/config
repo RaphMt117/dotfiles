@@ -1,0 +1,29 @@
+# -> => != == ----
+font-feature = -calt 
+font-feature = -liga
+font-feature = -dlig
+
+# background = 000000
+# background = 020410
+# background = 02040F
+
+# gruvbox
+background = 1B1E20
+
+gtk-tabs-location = hidden
+scrollback-limit = 10_000
+clipboard-read = allow
+clipboard-paste-protection = false
+
+window-padding-x = 0
+window-padding-y = 0
+window-padding-color = background
+
+# window-theme = dark
+window-decoration = false
+shell-integration-features = no-cursor, no-sudo, title
+
+# Transparency
+# background-opacity = 0.8
+# background-blur-radius = 20
+
