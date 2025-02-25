@@ -21,6 +21,8 @@ alias omzconfig="nvim ~/.oh-my-zsh"
 alias zshconfig="cd ~/dotfiles/.config/zshrc/ && nvim"
 alias tmuxconfig="cd ~/.config/tmux/ && nvim"
 alias nvimconfig="cd ~/.config/nvim/ && nvim"
+alias hyprconfig="cd ~/dotfiles/.config/hypr/ && nvim"
+alias mouseconfig='piper'
 
 # -----------------------------------------------------
 # Editor

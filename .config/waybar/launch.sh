@@ -15,26 +15,9 @@ pkill waybar
 sleep 0.5
 
 # -----------------------------------------------------
-# Default theme: /THEMEFOLDER;/VARIATION
+# Define current theme name
 # -----------------------------------------------------
-themestyle="/ml4w;/ml4w/light"
-
-# -----------------------------------------------------
-# Get current theme information from ~/.config/ml4w/settings/waybar-theme.sh
-# -----------------------------------------------------
-if [ -f ~/.config/ml4w/settings/waybar-theme.sh ]; then
-	themestyle=$(cat ~/.config/ml4w/settings/waybar-theme.sh)
-else
-	touch ~/.config/ml4w/settings/waybar-theme.sh
-	echo "$themestyle" >~/.config/ml4w/settings/waybar-theme.sh
-fi
-
-IFS=';' read -ra arrThemes <<<"$themestyle"
-echo ":: Theme: ${arrThemes[0]}"
-
-if [ ! -f ~/.config/waybar/themes${arrThemes[1]}/style.css ]; then
-	themestyle="/ml4w;/ml4w/light"
-fi
+themestyle="/ml4w-minimal"
 
 # -----------------------------------------------------
 # Loading the configuration
@@ -44,5 +27,5 @@ style_file="style.css"
 
 # Check if waybar-disabled file exists
 if [ ! -f $HOME/.cache/waybar-disabled ]; then
-	waybar -c ~/.config/waybar/themes${arrThemes[0]}/$config_file -s ~/.config/waybar/themes${arrThemes[1]}/$style_file &
+	waybar -c ~/.config/waybar/themes$themestyle/$config_file -s ~/.config/waybar/themes$themestyle/$style_file &
 fi

@@ -1,12 +1,67 @@
-// __        __          _
-// \ \      / /_ _ _   _| |__   __ _ _ __
-//  \ \ /\ / / _` | | | | '_ \ / _` | '__|
-//   \ V  V / (_| | |_| | |_) | (_| | |
-//    \_/\_/ \__,_|\__, |_.__/ \__,_|_|
-//                 |___/
-//
-// -----------------------------------------------------
-//
+[{
+    // General Settings
+    "layer": "top",
+    "margin-bottom": 0,
+    "passthrough": false,
+    "layer": "top",
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    "output": "eDP-1",
+    "exclusive": true,
+
+    // Load Modules
+    "include": [
+        "~/.config/ml4w/settings/waybar-quicklinks.json",
+        "~/.config/waybar/modules.json"
+    ],
+
+    // Pulseaudio
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}   {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+        "headphone": " ",
+        "hands-free": " ",
+        "headset": " ",
+        "phone": " ",
+        "portable": " ",
+        "car": " ",
+        "default": [" ", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "modules-left": [
+        //"custom/appmenuicon",
+        "hyprland/workspaces",
+        "group/links",
+    ],
+
+    "modules-center": [
+        //"hyprland/window",
+        "custom/empty"
+    ],
+
+    "modules-right": [
+        "pulseaudio",
+        //"backlight",
+        "bluetooth",
+        "battery",
+        "network",
+        "group/hardware",
+        "group/tools",
+        "custom/exit",
+        "tray",
+        "custom/ml4w-welcome",
+        "clock",
+    ]
+},
 {
     // General Settings
     "layer": "top",
@@ -15,6 +70,9 @@
     "margin-left": 0,
     "margin-right": 0,
     "spacing": 0,
+    "passthrough": false,
+    "output": "HDMI-A-1",
+    "exclusive": true,
 
     // Load Modules
     "include": [
@@ -72,4 +130,5 @@
         "custom/ml4w-welcome",
         "clock",
     ]
-}
+},
+]
